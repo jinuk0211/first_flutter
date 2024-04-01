@@ -37,10 +37,25 @@ class LoginPage extends StatelessWidget {
             child : TextButton(onPressed: (){
               print('forgot 버튼 클릭됨');
             }, child: Text('패스워드를 잊으셨나요?'))),
-            TextButton(onPressed: (){
-              print('로그인 버튼 클릭됨');
-            },
-                child: Text('로그인')),
+            SizedBox(
+              height:48,
+              width : double.infinity,
+              child : ElavatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder : (context) {
+                      return HomePage();
+                    },
+                  )),
+                },
+                style : ElavatedButton.styleFrom(
+                  backgroundcolor :  Colors.amber,
+                  foregroundcolor :  Colors.black,
+                  ),
+            
+                child: Text('로그인'),
+              ),
+            ),
             Text('sign up with'),
             SizedBox(height: 10),
             TextButton(onPressed: (){},
