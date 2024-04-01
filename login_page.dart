@@ -42,11 +42,7 @@ class LoginPage extends StatelessWidget {
               width : double.infinity,
               child : ElavatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder : (context) {
-                      return HomePage();
-                    },
-                  )),
+                  Navigator.of(context).pushNamed('/home');    
                 },
                 style : ElavatedButton.styleFrom(
                   backgroundcolor :  Colors.amber,
